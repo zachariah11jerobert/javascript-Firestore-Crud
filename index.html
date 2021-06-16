@@ -21,17 +21,7 @@
             <th>Email</th>
             <th>Action</th>
           </tr>
-          <tr>
-            <td>Cand</td>
-            <td>Dev</td>
-            <td>0212221234</td>
-            <td>cand@dev.com</td>
-            <td>Action</td>
-            <td>
-              <button class="btn btn-edit">Edit</button>
-              <button class="btn btn-delete">Delete</button>
-            </td>
-          </tr>
+         
         </table>
 
         <button class="btn btn-add">Add User</button>
@@ -44,7 +34,23 @@
           <div class="modal-body">
             <form class="form" autocomplete="off">
               <input type="text" name="firstName" placeholder="First Name" />
-              <input type="text" name="firstName" placeholder="Last Name" />
+              <input type="text" name="lastName" placeholder="Last Name" />
+              <input type="number" name="phone" placeholder="Phone" />
+              <input type="email" name="email" placeholder="Email" />
+              <button class="btn btn-modal">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edit Modal -->
+      <div class="edit-modal modal-wrapper">
+        <div class="modal">
+          <div class="modal-header"><h3>Edit User</h3></div>
+          <div class="modal-body">
+            <form class="form" autocomplete="off">
+              <input type="text" name="firstName" placeholder="First Name" />
+              <input type="text" name="lastName" placeholder="Last Name" />
               <input type="number" name="phone" placeholder="Phone" />
               <input type="email" name="email" placeholder="Email" />
               <button class="btn btn-modal">Submit</button>
@@ -53,6 +59,28 @@
         </div>
       </div>
     </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDvM1i5l3EO4g2Z0Nkq9qcX4RHlEBYJDxA",
+        authDomain: "crudwithjerome.firebaseapp.com",
+        projectId: "crudwithjerome",
+        storageBucket: "crudwithjerome.appspot.com",
+        messagingSenderId: "576590094455",
+        appId: "1:576590094455:web:7b32094488608b8e2be672",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db=firebase.firestore();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
