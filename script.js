@@ -59,6 +59,11 @@ const renderUser = (doc) => {
 // Click add user button
 btnAdd.addEventListener("click", () => {
   addModal.classList.add("modal-show");
+
+  addModalForm.firstName.value='';
+  addModalForm.lastName.value='';
+  addModalForm.phone.value='';
+  addModalForm.email.value='';
 });
 
 // User click anywhere outside the modal
